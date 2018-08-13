@@ -1,0 +1,586 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /***** BASE STYLES *****/
+   body{
+       background: #212040;
+       box-sizing: border-box;
+       font-family: 'Vollkorn', serif;
+       font-size: 16px;
+       margin: 0 auto;
+   }
+
+   #work, #about, #contact{
+     clear: both;
+   }
+
+   /***** GRID *****/
+   .full-width {
+     width: 100%;
+     max-width: 1200px;
+   }
+
+   .half-width {
+     width: 50%;
+     float: left;
+     max-width: 600px;
+   }
+
+   .third-width{
+     width: 33.33333%;
+     float: left;
+     max-width: 400px;
+   }
+
+
+   /***** HEADER *****/
+
+   header{
+    background: url('../img/blueheroimage.jpg') no-repeat;
+    background-size: cover;
+   }
+
+   nav ul{
+     display: flex;
+     flex-direction: row-reverse;
+     align-items: center;
+     justify-content: center;
+     list-style-type: none;
+     position: fixed;
+     top: 0px;
+     margin: 0;
+     padding: 0.25em 0px;
+     background: rgb(68,69,94, 0.9);
+   }
+
+  nav ul li{
+     margin-right: 2em;
+   }
+
+   nav ul li a{
+     font-family: 'Lato', sans-serif;
+     color:#b8bdbe;
+     text-decoration: none;
+   }
+
+   .last{
+     margin-right: 0px;
+   }
+
+   h1{
+     color: #e19b03;
+     font-family: 'Bad Script', cursive;
+     font-size: 3em;
+     text-align: center;
+     clear: both;
+     padding-top: 150px;
+     margin: 0 auto;
+   }
+
+   .subhead{
+     font-family: 'Lato', sans-serif;
+     color:#b8bdbe;
+     font-size:2em;
+     text-align: center;
+     padding: 0 1% 50px 1%;
+    }
+
+   .header-image{
+     display: none;
+   }
+
+   /***** WORK SECTION *****/
+
+   h2{
+     color: #e19b03;
+     font-family: 'Bad Script', cursive;
+     font-size: 3em;
+     text-align: center;
+     clear: both;
+     padding: 90px 5% 0 5%;
+     margin-bottom: 20px;
+   }
+
+   #gallery{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     align-content: center;
+   }
+
+   #gallery figure{
+     width: 50%;
+   }
+
+   #gallery figure img{
+     width: 100%;
+     border: 0.25em #e19b03 solid;
+   }
+
+   #gallery figcaption{
+     color: #e19b03;
+     padding-top: 10px;
+     margin-bottom: 30px;
+     font-size: 1em;
+   }
+
+   #gallery figcaption a{
+     color: #e19b03;
+     padding-top: 10px;
+     width: 100%;
+     margin: 0 auto;
+   }
+
+   #gallery figcaption a:visited{
+     color: #b8bdbe;
+   }
+
+   /***** ABOUT SECTION *****/
+
+   #about {
+     background-color:#44455e;
+   }
+
+   #head-shot{
+     width: 40%;
+     margin: 0 auto;
+     border: 5px black solid;
+   }
+
+   #about img{
+     border: none;
+     width: 100%;
+   }
+
+   #about p{
+     color: #000;
+     font-size: 1.2em;
+     text-align: left;
+     padding: 5% 10%;
+     margin-top: 0px;
+   }
+
+   #about a{
+     color: #000;
+     font-style: italic;
+   }
+
+   /***** CONTACT SECTION *****/
+
+   #contact p, address{
+     color: #b8bdbe;
+     text-align: center;
+     font-size: 1.5em;
+     padding: 2% 5%;
+   }
+
+   #contact address{
+     margin-bottom: 75%;
+   }
+
+   #contact a{
+     color: #b8bdbe;
+     text-decoration: none;
+     padding: 2% 5%;
+   }
+
+   #email-icon{
+     width: 25%;
+     max-width: 200px;
+     text-align:center;
+     display: block;
+     margin: 0px auto;
+     padding: 30px 0;
+   }
+
+   #email-icon img{
+     width: 100%;
+     height: 25%;
+   }
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media screen and (min-width: 768px) {
+  /*Tablet styles here */
+
+  /***** HEADER *****/
+
+  header{
+    height: 50%;
+  }
+
+  nav ul li a{
+    font-size: 1.15em;
+  }
+
+  h1{
+    font-size: 3.5em;
+  }
+
+
+  /***** WORK SECTION *****/
+  #gallery figure{
+    width: 30%;
+  }
+
+} /*end of table styles */
+
+@media screen and (min-width: 940px) {
+  /*Desktop styles here */
+
+  /***** HEADER *****/
+
+  header{
+    height: 700px;
+  }
+
+  nav ul{
+    justify-content: flex-start;
+  }
+
+  nav ul li a{
+    font-size: 1.25em;
+  }
+
+  .last{
+    margin-right: 50px;
+  }
+
+  h1{
+    font-size: 6.25em;
+  }
+
+  .header-image{
+    display: block;
+  }
+
+  /***** WORK SECTION *****/
+
+  h2{
+    font-size: 4em;
+    margin-bottom: 50px;
+  }
+
+  #gallery figure{
+    width: 25%;
+    margin: 3%;
+  }
+
+
+  /***** ABOUT SECTION *****/
+
+  #about-content{
+    width: 100%;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+  }
+
+  #head-shot{
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+    margin:0 3% 50px 0;
+    padding: 0;
+  }
+
+  #about img{
+    width: 100%;
+    height: 100%;
+  }
+
+  #about p{
+    flex-basis: 50%;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+
+  /***** CONTACT SECTION *****/
+
+  #contact p, address{
+    color: #b8bdbe;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #contact a{
+    color: #b8bdbe;
+    text-decoration: none;
+  }
+
+  #email-icon{
+    text-align:center;
+    display: block;
+    margin: 0px auto;
+    padding: 30px;
+  }
+
+
+
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
