@@ -1,0 +1,260 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body{
+  width: 80%;
+  margin: 0 auto;
+  background: #aaa;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1{
+  margin: 5%;
+  font-size: 3em;
+}
+
+button{
+  display: block;
+  margin: 3% auto;
+  padding: 1% 3%;
+  text-align: center;
+}
+
+header button{
+  margin: 0;
+}
+
+input{
+  margin: 0 auto;
+}
+
+.large-flex-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.outlined{
+  border: 1px solid black;
+  background: white;
+  margin-bottom: 2%;
+}
+
+ul{
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  font-size: 2em;
+  margin: 0;
+}
+
+#m{ /* How do I get the size to shrink so it doesn't wrap?  Need to study flex-shrink. */
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#m li{
+  margin: 0 1%;
+}
+
+#word ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.hidden, .show{
+  width: 1em;
+  margin: 2%;
+}
+
+.hidden{
+  height: 25px;
+  border-bottom: 1px solid black;
+}
+
+.show{
+  display: block;
+  border-bottom: none;
+}
+
+.noshow{
+  display: none;
+}
+
+#results{
+  font-size: 1.25em;
+  margin-top: 3%;
+}
+
+#gifs{
+  flex-basis: 33%;
+}
+
+#catgif0, #catgif1, #catgif2, #catgif3, #catgif4, #catgif5{
+  width:100%;
+  /*padding-bottom: 70%;
+  position:relative;*/
+}
+
+#gifs p{
+  font-size: 1.25em;
+  margin: 0;
+  color: red;
+}
+
+iframe{
+  margin-top: 3%;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  /*Smaller screens here */
+
+  body{
+    font-size: 12px;
+  }
+
+  .hidden, .show{
+    width: 0.75em;
+    margin: 2% 0.5%;
+  }
+
+  #gifs{
+    flex-basis: 150px;
+  }

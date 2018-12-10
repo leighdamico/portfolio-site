@@ -197,7 +197,17 @@ textarea {
      margin-bottom: 20px;
    }
 
-   #gallery{
+   h3{
+     color: #e19b03;
+     font-family: 'Bad Script', cursive;
+     font-size: 2em;
+     text-align: center;
+     clear: both;
+     padding: 90px 5% 0 5%;
+     margin-bottom: 20px;
+   }
+
+   .gallery{
      display: flex;
      align-items: center;
      justify-content: center;
@@ -205,30 +215,32 @@ textarea {
      align-content: center;
    }
 
-   #gallery figure{
-     width: 50%;
+   .gallery figure{
+     width: 30%;
+     height: 30%;
    }
 
-   #gallery figure img{
+   .gallery figure img{
      width: 100%;
      border: 0.25em #e19b03 solid;
    }
 
-   #gallery figcaption{
+   .gallery figcaption{
      color: #e19b03;
      padding-top: 10px;
      margin-bottom: 30px;
-     font-size: 1em;
+     font-size: 1.1em;
+     font-family: 'Lato', sans-serif;
    }
 
-   #gallery figcaption a{
+   .gallery figcaption a{
      color: #e19b03;
      padding-top: 10px;
      width: 100%;
      margin: 0 auto;
    }
 
-   #gallery figcaption a:visited{
+   .gallery figcaption a:visited{
      color: #b8bdbe;
    }
 
@@ -410,7 +422,7 @@ textarea {
     width: 30%;
   }
 
-} /*end of table styles */
+} /*end of tablet styles */
 
 @media screen and (min-width: 940px) {
   /*Desktop styles here */

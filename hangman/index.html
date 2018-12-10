@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hangman</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+      </head>
+
+    <body>
+      <header>
+        <h1>Hangman!</h1>
+        <button onclick="setUpGame()">Start a New Game</button>
+      </header>
+      <main>
+        <section class="large-flex-container">
+          <canvas id="gallows" class="outlined" width = "200"  height = "300">Update your browser to see Hangman!</canvas>
+          <div>
+            <input type="text" onkeyup="inputLetterKeyUp(event)" id="j"/>
+            <button onclick="matchSearch()">Guess a Letter</button>
+
+            <input type="text" onkeyup="inputWordKeyUp(event)" id="guessedWord"/>
+            <button onclick="guessWord()">Guess the Word</button>
+          </div>
+          <div id="gifs">
+            <div id="catgif0" class="noshow"><p>Only enter one letter at a time.</p><a href="https://giphy.com/gifs/JIX9t2j0ZTN9S"><iframe src="https://giphy.com/embed/JIX9t2j0ZTN9S" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+            <div id="catgif1" class="noshow"><p>Guess again.</p><a href="https://giphy.com/gifs/loop-cat-EmMWgjxt6HqXC"><iframe src="https://giphy.com/embed/EmMWgjxt6HqXC" width="100%" height="100%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+            <div id="catgif2" class="noshow"><p>That letter has already been guessed.</p><a href="https://giphy.com/gifs/cat-animal-kitten-6uMqzcbWRhoT6"><iframe src="https://giphy.com/embed/6uMqzcbWRhoT6" width="100%" height="100%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+            <div id="catgif3" class="noshow"><p>Nice try.  Game over.</p><a href="https://giphy.com/gifs/cat-fail-quO0X65yj6gw0"><iframe src="https://giphy.com/embed/quO0X65yj6gw0" width="100%" height="100%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+            <div id="catgif4" class="noshow"><p>Match!</p><a href="https://giphy.com/gifs/cat-33OrjzUFwkwEg"><iframe src="https://giphy.com/embed/33OrjzUFwkwEg" width="100%" height="100%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+            <div id="catgif5" class="noshow"><p>You win!</p><a href="https://giphy.com/gifs/cat-kitten-euMphY08JNims"><iframe src="https://giphy.com/embed/euMphY08JNims" width="100%" height="100%"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></a></div>
+          </div>
+        </section>
+        <div id="word">
+          <p id="results"></p>
+          <ul id="h" class="outlined">
+            <!-- js inserts li elements here -->
+          </ul>
+        </div> <!--word -->
+        <div class = "outlined">
+          <p>Guessed Letters</p>
+          <ul id="m">
+            <!-- js inserts li elements here -->
+          </ul>
+        </div>
+
+      </main>
+
+      <script src="js/main.js"></script>
+  </body>
+</html>
