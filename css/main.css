@@ -94,21 +94,26 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
 
-   /***** BASE STYLES *****/
-   body{
-       background: #212040;
-       box-sizing: border-box;
-       font-family: 'Vollkorn', serif;
-       font-size: 16px;
-       margin: 0 auto;
-   }
+/***** BASE STYLES *****/
+body{
+  background: #212040;
+  box-sizing: border-box;
+  font-family: 'Vollkorn', serif;
+  font-size: 16px;
+  margin: 0 auto;
+  color: #b8bdbe;
+}
 
-   #work, #about, #contact{
-     clear: both;
-   }
+section{
+  clear: both;
+}
+
+.alt-background{
+  background-color:#44455e;
+}
 
    /***** GRID *****/
    .full-width {
@@ -185,7 +190,7 @@ textarea {
      display: none;
    }
 
-   /***** WORK SECTION *****/
+   /*****SERVICES AND WORK SECTIONS *****/
 
    h2{
      color: #e19b03;
@@ -207,6 +212,37 @@ textarea {
      margin-bottom: 20px;
    }
 
+   #services h3{
+     font-family: 'Lato', sans-serif;
+     font-weight: lighter;
+     padding: 0;
+     margin: 0;
+   }
+
+   .package-description{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 80%;
+     border: 1px solid #b8bdbe;
+     margin: 5% auto;
+     margin-top: 0;
+   }
+
+   .package-description ul{
+     list-style-type: square;
+     font-size: 1.2em;
+     width: 30%;
+   }
+
+   .package-description li{
+     padding-bottom: 3%;
+   }
+
+   .package-description img{
+     width: 100%;
+   }
+
    .gallery{
      display: flex;
      align-items: center;
@@ -215,17 +251,25 @@ textarea {
      align-content: center;
    }
 
-   .gallery figure{
+   figure{
      width: 30%;
      height: 30%;
    }
 
-   .gallery figure img{
+   figure img{
      width: 100%;
      border: 0.25em #e19b03 solid;
    }
 
-   .gallery figcaption{
+   figure.small{
+     width: auto;
+   }
+
+   figure.small img{
+     border: none;
+   }
+
+   figcaption{
      color: #e19b03;
      padding-top: 10px;
      margin-bottom: 30px;
@@ -233,27 +277,22 @@ textarea {
      font-family: 'Lato', sans-serif;
    }
 
-   .gallery figcaption a{
+   figcaption a{
      color: #e19b03;
      padding-top: 10px;
      width: 100%;
      margin: 0 auto;
    }
 
-   .gallery figcaption a:visited{
+   figcaption a:visited{
      color: #b8bdbe;
    }
 
    /***** ABOUT SECTION *****/
-
-   #about {
-     background-color:#44455e;
-   }
-
-   #head-shot{
+    #head-shot{
      width: 40%;
      margin: 0 auto;
-     border: 5px black solid;
+     border: 5px #e19b03 solid;
    }
 
    #about img{
@@ -262,15 +301,14 @@ textarea {
    }
 
    #about p{
-     color: #000;
      font-size: 1.2em;
      text-align: left;
      padding: 5% 10%;
-     margin-top: 0px;
+     margin-top: 0px; */
    }
 
    #about a{
-     color: #000;
+     color: #b8bdbe;
      font-style: italic;
    }
 
@@ -471,7 +509,7 @@ textarea {
   #about-content{
     width: 100%;
      display: flex;
-     align-items: flex-start;
+     align-items: center;
      justify-content: center;
   }
 
